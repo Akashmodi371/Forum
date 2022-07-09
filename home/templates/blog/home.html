@@ -4,12 +4,14 @@
 <div class="outer-wrap">
   <header class="masthead">
     <div class="sidebar-switcher">
-      Select layout: <a href="#" class="sidebar-left-toggle"><i class="fa fa-align-left"></i><span
+      <a href="#" class="sidebar-left-toggle"><i class="fa fa-align-left"></i><span
           class="screen-reader-text">Move sidebar to the left</span></a> <a href="#" class="sidebar-right-toggle"><i
           class="fa fa-align-right"></i><span class="screen-reader-text">Move sidebar to the right</span></a> <a
-        href="#" class="no-sidebar-toggle"><i class="fa fa-align-justify"></i><span class="screen-reader-text">Display
-          content vertically</span></a> <a href="#" class="hide-sidebar-toggle"><i
-          class="fa fa-arrow-circle-right"></i><span class="screen-reader-text">Remove sidebar</span></a>
+        href="#" class="no-sidebar-toggle">
+        {% comment %} <i class="fa fa-align-justify"></i><span class="screen-reader-text">Display
+          content vertically</span></a>  {% endcomment %}
+          <a href="#" class="hide-sidebar-toggle">
+            <i class="fa fa-arrow-circle-right"></i><span class="screen-reader-text">Remove sidebar</span></a>
     </div><!-- .sidebar-switcher -->
 
     <div class="centered">

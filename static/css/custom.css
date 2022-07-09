@@ -17,7 +17,7 @@ Accessibility
   scrollbar-width: thin !important;
   --white:#fff;
   --black:#131417;
-  --primary:#e6810ee8;
+  --primary:#020021e8;
   --primarylite:#53b141;
   --gray:#6d7175;
   --dark:#253248;
@@ -53,7 +53,7 @@ body{
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #a6fff8;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
@@ -82,7 +82,7 @@ body {
 
 .card-content h2 {
   font-size: 18px;
-  color: #e74c3c;  
+  color: #390053;  
 }
 
 .centered {
@@ -100,7 +100,7 @@ body {
 Header styles minus menu
 --------------------------------------------------------------*/
 .masthead {
-  background: #e74c3c;
+  background: #11004d;
 }
 
 .site-title {
@@ -143,7 +143,7 @@ Base styles
 .main-menu {
   padding: .4em 1em;
   color: white;
-  background: hsl(0, 0%, 15%);
+  background: hsl(215, 100%, 16%);
 }
 
 .post-content {
@@ -261,7 +261,7 @@ Base styles that apply to all menu items
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background: hsl(0, 0%, 15%);
+  background: hsl(253, 100%, 12%);
 }
 
 .menu li a {
@@ -272,7 +272,7 @@ Base styles that apply to all menu items
 }
 
 .menu li a:hover {
-  background: hsl(0, 0%, 25%);
+  background: hsl(247, 100%, 8%);
 }
 
 
@@ -409,7 +409,7 @@ Styles for social media menu
 Styles for mixed menu (drop-down + social)
 --------------------------------------------------------------*/
 .nav-mixed {
-  background: hsl(0, 0%, 15%);
+  background: hsl(247, 100%, 10%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -926,7 +926,10 @@ body{
   }
   
   .section5 section p{
-  color:rgba(1,1,1,0.8);
+  color:rgba(255, 255, 255, 0.8);
+  }
+  .section5 section h1{
+    color:rgba(255, 255, 255, 0.8);
   }
   
   .section5 section .btn2{

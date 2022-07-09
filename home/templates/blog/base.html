@@ -27,20 +27,20 @@
       <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
+          {% if request.user.is_authenticated %}
           <li class="has-children">
             <a href="#">User<button class="dropdown-toggle" aria-expanded="false"><span
                   class="screen-reader-text">Expand child menu</span></button></a>
             <ul class="sub-menu">
-              {% if request.user.is_authenticated %}
               <li><a href="{% url 'add_blog' %}">Post</a></li>
               <li><a href="{% url 'see_blog' %}">Profile</a></li>
-              <li><a href="{% url 'logout_view' %}" class="fa fa-sign-out" aria-hidden="true">logout</a></li>
-              {% else %}
-              <a class="btn btn-primary btn-log-in" href="{% url 'login' %}">SUGNUP/LOGIN</a>
-              {% endif %}
+              
             </ul>
           </li>
-          <li class="has-children">
+          {% else %}
+              {% comment %} <a class="btn btn-primary btn-log-in" href="{% url 'login' %}">LOGIN</a> {% endcomment %}
+          {% endif %}
+          {% comment %} <li class="has-children">
             <a href="#">Categorys<button class="dropdown-toggle" aria-expanded="false"><span
                   class="screen-reader-text">Expand child menu</span></button></a>
             <ul class="sub-menu">
@@ -52,23 +52,25 @@
               </li>
               {% endfor %}
             </ul>
-          </li>
-          <li><a href="#">About</a></li>
+          </li> {% endcomment %}
+          {% comment %} <li><a href="#">About</a></li> {% endcomment %}
           {% if request.user.is_authenticated %}
-
+          <li><a href="{% url 'logout_view' %}" class="fa fa-sign-out" aria-hidden="true">logout</a></li>
           {% else %}
           <li><a href="{% url 'register' %}">Signup</a></li>
+          <li><a class="btn btn-log-in" href="{% url 'login' %}">LOGIN</a></li>
+
           {% endif %}
         </ul>
       </nav><!-- #multi-level-nav .multi-level-nav -->
 
       <nav id="social-menu" class="social-menu" role="navigation">
         <ul>
-          <li><a href="https://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li>
+          {% comment %} <li><a href="https://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li> {% endcomment %}
           <li><a href="https://github.com/"><span class="screen-reader-text">Github</span></a></li>
           <li><a href="https://www.linked"><span class="screen-reader-text">LinkedIn</span></a></li>
-          <li><a href="http://dribbble.com"><span class="screen-reader-text">Dribbble</span></a></li>
-          <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+          {% comment %} <li><a href="http://dribbble.com"><span class="screen-reader-text">Dribbble</span></a></li>
+          <li><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li> {% endcomment %}
         </ul>
       </nav> <!-- .social-menu -->
 
@@ -85,7 +87,7 @@
 
 
   <!-- sidebar social  -->
-  <div class="side-social-link">
+  {% comment %} <div class="side-social-link">
     <ul>
       <li><a href="#"><i class="fa fa-share-square"></i></a></li>
       <li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -93,7 +95,7 @@
       <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
       <li><a href="#"><i class="fa fa-youtube"></i></a></li>
     </ul>
-  </div>
+  </div> {% endcomment %}
   <!-- sidebar social end -->
 
 
@@ -107,9 +109,7 @@
   <!--SECTION5-->
   <div class="section5">
     <section>
-      <h1 class="title inline-photo2 show-on-scroll2">Subscribe to our Forum</h1>
-      <p class="inline-photo show-on-scroll">Get latest news on property postings, bankrupt details, new installment
-        scheme.</p>
+      <h1 class="title inline-photo2 show-on-scroll2">Subscribe for daily news</h1>
     </section>
     <section>
       <a class="btn2" href="{% url 'register' %}">Subscribe</a>
@@ -119,7 +119,7 @@
 
 
 
-  <!--FOOTER-->
+  {% comment %} <!--FOOTER-->
   <footer>
     <div class="footer">
       <section>
@@ -149,7 +149,7 @@
   </footer>
   <div class="sub-footer">
     &copy; {% now "Y" %} All rights reserved |Forum
-  </div>
+  </div> {% endcomment %}
 
 
 
